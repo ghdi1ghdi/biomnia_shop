@@ -28,12 +28,12 @@ export default function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: Products | Biomnia </title>
+        <title> Home: Products | Biomnia </title>
       </Helmet>
 
       <Container>
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Products
+        <Typography variant="h3" sx={{ mb: 5 }}>
+          Local Food Store
         </Typography>
 
         <Stack

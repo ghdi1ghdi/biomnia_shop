@@ -43,7 +43,7 @@ export default function Page404() {
           />
 
           <Button
-            to="/"
+            to="/home/app"
             size="large"
             variant="contained"
             component={RouterLink}

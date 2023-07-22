@@ -26,7 +26,7 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | Biomnia </title>
+        <title> Home | Biomnia </title>
       </Helmet>
 
       <Container maxWidth="xl">

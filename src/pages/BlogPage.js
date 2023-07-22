@@ -25,7 +25,7 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: Blog | Biomnia </title>
+        <title> Home: Blog | Biomnia </title>
       </Helmet>
 
       <Container>
