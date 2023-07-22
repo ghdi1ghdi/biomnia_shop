@@ -117,7 +117,7 @@ export default function Nav({ openNav, onCloseNav }) {
           </Box>
 
           <Button
-            href="https://biomnia.netlify.app/"
+            href="https://biospectrum.netlify.app/"
             target="_blank"
             variant="contained"
           >
