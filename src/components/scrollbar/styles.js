@@ -22,9 +22,11 @@ export const StyledScrollbar = styled(SimpleBar)(({ theme }) => ({
   },
   "& .simplebar-track.simplebar-vertical": {
     width: 10,
+    backgroundColor: "#DDFFE6",
   },
   "& .simplebar-track.simplebar-horizontal .simplebar-scrollbar": {
     height: 6,
+    backgroundColor: "#DDFFE6",
   },
   "& .simplebar-mask": {
     zIndex: "inherit",
