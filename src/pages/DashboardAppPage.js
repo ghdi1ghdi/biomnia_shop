@@ -30,8 +30,8 @@ export default function DashboardAppPage() {
       </Helmet>
 
       <Container maxWidth="xl">
-        <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+        <Typography variant="h3" sx={{ mb: 5 }}>
+          안녕하세요! 박연진 님 <br></br>오늘도 마이크로바이옴을 챙겨주세요!
         </Typography>
 
         <Grid container spacing={3}>
@@ -72,7 +72,7 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="MicroBiome 상태"
+              title="마이크로바이옴 상태"
               subheader="(+31.4%) than last year"
               chartLabels={[
                 "09/01/2022",
@@ -95,13 +95,13 @@ export default function DashboardAppPage() {
                 //   data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
                 // },
                 {
-                  name: "나의 MicroBiome",
+                  name: "나의 마이크로바이옴",
                   type: "area",
                   fill: "gradient",
                   data: [22, 25, 20, 43, 38, 45, 40, 50, 55, 65, 70],
                 },
                 {
-                  name: "우리 아이 MicroBiome",
+                  name: "우리 아이 마이크로바이옴",
                   type: "area",
                   fill: "gradient",
                   data: [30, 25, 36, 30, 45, 35, 55, 52, 59, 50, 67],
@@ -111,6 +111,56 @@ export default function DashboardAppPage() {
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
+            <AppOrderTimeline
+              title="정기 배송 일정"
+              list={[...Array(5)].map((_, index) => ({
+                id: faker.datatype.uuid(),
+                title: [
+                  "2023.07.24, 4주차, 47000원",
+                  "2023.07.31, 1주차, 52000원",
+                  "2023.08.07, 2주차, 58000원",
+                  "2023.08.14, 3주차, 43000원",
+                  "2023.08.21, 4주차, 50000원",
+                ][index],
+                type: `order${index + 1}`,
+                // time: faker.date.past(),
+                time: ["2023.06.24"],
+              }))}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={8}>
+            <AppNewsUpdate
+              title="나의 냉장고 관리"
+              list={[...Array(5)].map((_, index) => ({
+                id: faker.datatype.uuid(),
+                title: ["사과", "귀리", "양파", "토마토", "바나나"][index],
+                description: [
+                  "바이옴니아",
+                  "바이옴니아",
+                  "이마트",
+                  "홈플러스",
+                  "쿠팡",
+                ][index],
+                image: `/assets/images/covers/cover_${index + 1}.jpg`,
+                postedAt: faker.date.recent(),
+              }))}
+            />
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <AppTasks
+              title="Tasks"
+              list={[
+                { id: "1", label: "이번주 식단 추천 확인하기" },
+                { id: "2", label: "이번달 내 마이크로바이옴 검사받기" },
+                { id: "3", label: "이번달 예솔이 마이크로바이옴 검사받기" },
+                { id: "4", label: "정기배송 날짜 신청하기" },
+                { id: "5", label: "마늘 구매하기" },
+                { id: "6", label: "사과 구매하기" },
+                { id: "7", label: "레드와인 구매하기" },
+              ]}
+            />
+          </Grid>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Current Visits"
               chartData={[
@@ -169,37 +219,6 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={8}>
-            <AppNewsUpdate
-              title="News Update"
-              list={[...Array(5)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: faker.name.jobTitle(),
-                description: faker.name.jobTitle(),
-                image: `/assets/images/covers/cover_${index + 1}.jpg`,
-                postedAt: faker.date.recent(),
-              }))}
-            />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline
-              title="Order Timeline"
-              list={[...Array(5)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: [
-                  "1983, orders, $4220",
-                  "12 Invoices have been paid",
-                  "Order #37745 from September",
-                  "New order placed #XF-2356",
-                  "New order placed #XF-2346",
-                ][index],
-                type: `order${index + 1}`,
-                time: faker.date.past(),
-              }))}
-            />
-          </Grid>
-
           <Grid item xs={12} md={6} lg={4}>
             <AppTrafficBySite
               title="Traffic by Site"
@@ -250,20 +269,7 @@ export default function DashboardAppPage() {
                 },
               ]}
             />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={8}>
-            <AppTasks
-              title="Tasks"
-              list={[
-                { id: "1", label: "Create FireStone Logo" },
-                { id: "2", label: "Add SCSS and JS files if required" },
-                { id: "3", label: "Stakeholder Meeting" },
-                { id: "4", label: "Scoping & Estimations" },
-                { id: "5", label: "Sprint Showcase" },
-              ]}
-            />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </>
