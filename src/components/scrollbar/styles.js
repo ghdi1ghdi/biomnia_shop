@@ -8,6 +8,7 @@ export const StyledRootScrollbar = styled("div")(() => ({
   flexGrow: 1,
   height: "100%",
   overflow: "hidden",
+  backgroundColor: "#DDFFE6",
 }));
 
 export const StyledScrollbar = styled(SimpleBar)(({ theme }) => ({
@@ -22,11 +23,9 @@ export const StyledScrollbar = styled(SimpleBar)(({ theme }) => ({
   },
   "& .simplebar-track.simplebar-vertical": {
     width: 10,
-    backgroundColor: "#DDFFE6",
   },
   "& .simplebar-track.simplebar-horizontal .simplebar-scrollbar": {
     height: 6,
-    backgroundColor: "#DDFFE6",
   },
   "& .simplebar-mask": {
     zIndex: "inherit",
