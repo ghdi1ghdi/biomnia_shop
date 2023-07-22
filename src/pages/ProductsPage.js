@@ -33,7 +33,7 @@ export default function ProductsPage() {
 
       <Container>
         <Typography variant="h3" sx={{ mb: 5 }}>
-          Local Food Store
+          온라인 스토어 <br></br>싱싱한 로컬 푸드를 만나보세요!
         </Typography>
 
         <Stack

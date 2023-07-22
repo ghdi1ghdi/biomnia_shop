@@ -66,7 +66,13 @@ export default function Nav({ openNav, onCloseNav }) {
       }}
     >
       {/* box 위치 가운데로 조정 */}
-      <Box sx={{ px: 5, py: 3, display: "inline-flex" }}>
+      <Box
+        sx={{
+          px: 5,
+          py: 3,
+          display: "inline-flex",
+        }}
+      >
         <Logo />
       </Box>
       <Box sx={{ mb: 5, mx: 2.5 }}>

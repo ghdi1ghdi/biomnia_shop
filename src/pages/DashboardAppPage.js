@@ -31,7 +31,8 @@ export default function DashboardAppPage() {
 
       <Container maxWidth="xl">
         <Typography variant="h3" sx={{ mb: 5 }}>
-          안녕하세요! 박연진 님 <br></br>오늘도 마이크로바이옴을 챙겨주세요!
+          안녕하세요! 박연진 님 <br></br>오늘도 Biomnia와 함께 마이크로바이옴을
+          챙겨봐요!
         </Typography>
 
         <Grid container spacing={3}>
@@ -141,7 +142,7 @@ export default function DashboardAppPage() {
                   "홈플러스",
                   "쿠팡",
                 ][index],
-                image: `/assets/images/covers/cover_${index + 1}.jpg`,
+                image: `/assets/images/home_image/re_${index + 1}.jpeg`,
                 postedAt: faker.date.recent(),
               }))}
             />

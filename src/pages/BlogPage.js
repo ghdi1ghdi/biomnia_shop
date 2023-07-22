@@ -36,7 +36,8 @@ export default function BlogPage() {
           mb={5}
         >
           <Typography variant="h3" gutterBottom>
-            Recipe
+            Biomnia 추천 레시피 <br></br>Biomnia 사용자가 인증한 레시피로
+            마이크로바이옴을 챙겨보세요!
           </Typography>
           <Button
             variant="contained"
