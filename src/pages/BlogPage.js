@@ -25,7 +25,7 @@ export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title> Home: Blog | Biomnia </title>
+        <title> Home: Recipe | Biomnia </title>
       </Helmet>
 
       <Container>
@@ -35,8 +35,8 @@ export default function BlogPage() {
           justifyContent="space-between"
           mb={5}
         >
-          <Typography variant="h4" gutterBottom>
-            Blog
+          <Typography variant="h3" gutterBottom>
+            Recipe
           </Typography>
           <Button
             variant="contained"

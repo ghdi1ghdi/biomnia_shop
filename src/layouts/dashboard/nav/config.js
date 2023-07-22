@@ -22,8 +22,8 @@ const navConfig = [
     icon: icon("ic_cart"),
   },
   {
-    title: "blog",
-    path: "/home/blog",
+    title: "recipe",
+    path: "/home/recipe",
     icon: icon("ic_blog"),
   },
   // {
