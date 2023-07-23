@@ -13,17 +13,17 @@ const icon = (name) => (
 const navConfig = [
   {
     title: "home",
-    path: "/home/app",
+    path: "/dashboard/app",
     icon: icon("ic_analytics"),
   },
   {
     title: "online store",
-    path: "/home/products",
+    path: "/dashboard/products",
     icon: icon("ic_cart"),
   },
   {
     title: "recipe",
-    path: "/home/recipe",
+    path: "/dashboard/recipe",
     icon: icon("ic_blog"),
   },
   // {
