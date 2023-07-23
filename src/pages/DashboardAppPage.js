@@ -5,18 +5,18 @@ import { faker } from "@faker-js/faker";
 import { styled } from "@mui/material/styles";
 import { Grid, Container, Typography } from "@mui/material";
 // components
-import Iconify from "../components/iconify";
+// import Iconify from "../components/iconify";
 // sections
 import {
   AppTasks,
   AppNewsUpdate,
   AppOrderTimeline,
-  AppCurrentVisits,
   AppWebsiteVisits,
-  AppTrafficBySite,
-  AppWidgetSummary,
-  AppCurrentSubject,
-  AppConversionRates,
+  // AppCurrentVisits,
+  // AppTrafficBySite,
+  // AppWidgetSummary,
+  // AppCurrentSubject,
+  // AppConversionRates,
 } from "../sections/@dashboard/app";
 
 // ----------------------------------------------------------------------
@@ -26,7 +26,7 @@ const StyledContent = styled("div")(({ theme }) => ({
   margin: "auto",
   minHeight: "100vh",
   display: "flex",
-  justifyContent: "center",
+  // justifyContent: "center",
   flexDirection: "column",
   // padding: theme.spacing(12, 0),
 }));
@@ -40,7 +40,7 @@ export default function DashboardAppPage() {
       </Helmet>
 
       <Container maxWidth="xl">
-        <StyledContent sx={{ textAlign: "center", alignItems: "center" }}>
+        <StyledContent>
           <Typography variant="h3" sx={{ mb: 5 }}>
             안녕하세요! 박연진 님 <br></br>오늘도 Biomnia와 함께
             마이크로바이옴을 챙겨봐요!
