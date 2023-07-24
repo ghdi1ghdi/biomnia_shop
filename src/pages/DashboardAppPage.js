@@ -105,6 +105,23 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
+          <Grid item xs={12} md={6} lg={4}>
+            <AppOrderTimeline
+              title="정기 배송 일정"
+              list={[...Array(5)].map((_, index) => ({
+                id: faker.datatype.uuid(),
+                title: [
+                  "2023.07.24, 4주차, 47000원",
+                  "2023.07.31, 1주차, 52000원",
+                  "2023.08.07, 2주차, 58000원",
+                  "2023.08.14, 3주차, 43000원",
+                  "2023.08.21, 4주차, 50000원",
+                ][index],
+                type: `order${index + 1}`,
+                time: faker.date.past(),
+              }))}
+            />
+          </Grid>
           {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Current Visits"
@@ -183,24 +200,6 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
-            <AppOrderTimeline
-              title="정기 배송 일정"
-              list={[...Array(5)].map((_, index) => ({
-                id: faker.datatype.uuid(),
-                title: [
-                  "2023.07.24, 4주차, 47000원",
-                  "2023.07.31, 1주차, 52000원",
-                  "2023.08.07, 2주차, 58000원",
-                  "2023.08.14, 3주차, 43000원",
-                  "2023.08.21, 4주차, 50000원",
-                ][index],
-                type: `order${index + 1}`,
-                time: faker.date.past(),
-              }))}
-            />
-          </Grid>
-
           {/* <Grid item xs={12} md={6} lg={4}>
             <AppTrafficBySite
               title="Traffic by Site"
@@ -253,7 +252,7 @@ export default function DashboardAppPage() {
             />
           </Grid> */}
 
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid item xs={12} md={6} lg={4}>
             <AppTasks
               title="Tasks"
               list={[
