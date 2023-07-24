@@ -26,12 +26,13 @@ export default function DashboardAppPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard | Minimal UI </title>
+        <title> Home | Biomnia </title>
       </Helmet>
 
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, Welcome back
+          안녕하세요! 박연진 님 <br></br>오늘도 Biomnia와 함께 마이크로바이옴을
+          챙겨봐요!
         </Typography>
 
         <Grid container spacing={3}>
@@ -72,45 +73,39 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="Website Visits"
-              subheader="(+43%) than last year"
+              title="마이크로바이옴 상태"
+              subheader="(+31.4%) than last year"
               chartLabels={[
-                "01/01/2003",
-                "02/01/2003",
-                "03/01/2003",
-                "04/01/2003",
-                "05/01/2003",
-                "06/01/2003",
-                "07/01/2003",
-                "08/01/2003",
-                "09/01/2003",
-                "10/01/2003",
-                "11/01/2003",
+                "09/01/2022",
+                "10/01/2022",
+                "11/01/2022",
+                "12/01/2022",
+                "01/01/2023",
+                "02/01/2023",
+                "03/01/2023",
+                "04/01/2023",
+                "05/01/2023",
+                "06/01/2023",
+                "07/01/2023",
               ]}
               chartData={[
                 {
-                  name: "Team A",
-                  type: "column",
-                  fill: "solid",
-                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
-                },
-                {
-                  name: "Team B",
+                  name: "나의 마이크로바이옴",
                   type: "area",
                   fill: "gradient",
-                  data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
+                  data: [22, 25, 20, 43, 38, 45, 40, 50, 55, 65, 70],
                 },
                 {
-                  name: "Team C",
-                  type: "line",
-                  fill: "solid",
-                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
+                  name: "우리 아이 마이크로바이옴",
+                  type: "area",
+                  fill: "gradient",
+                  data: [30, 25, 36, 30, 45, 35, 55, 52, 59, 50, 67],
                 },
               ]}
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
               title="Current Visits"
               chartData={[
@@ -126,9 +121,9 @@ export default function DashboardAppPage() {
                 theme.palette.error.main,
               ]}
             />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={8}>
+          {/* <Grid item xs={12} md={6} lg={8}>
             <AppConversionRates
               title="Conversion Rates"
               subheader="(+43%) than last year"
@@ -145,9 +140,9 @@ export default function DashboardAppPage() {
                 { label: "United Kingdom", value: 1380 },
               ]}
             />
-          </Grid>
+          </Grid> */}
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppCurrentSubject
               title="Current Subject"
               chartLabels={[
@@ -167,16 +162,22 @@ export default function DashboardAppPage() {
                 () => theme.palette.text.secondary
               )}
             />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} md={6} lg={8}>
             <AppNewsUpdate
-              title="News Update"
+              title="나의 냉장고 관리"
               list={[...Array(5)].map((_, index) => ({
                 id: faker.datatype.uuid(),
-                title: faker.name.jobTitle(),
-                description: faker.name.jobTitle(),
-                image: `/assets/images/covers/cover_${index + 1}.jpg`,
+                title: ["사과", "귀리", "양파", "토마토", "바나나"][index],
+                description: [
+                  "바이옴니아",
+                  "바이옴니아",
+                  "이마트",
+                  "홈플러스",
+                  "쿠팡",
+                ][index],
+                image: `/assets/images/home_image/re_${index + 1}.jpeg`,
                 postedAt: faker.date.recent(),
               }))}
             />
@@ -184,15 +185,15 @@ export default function DashboardAppPage() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppOrderTimeline
-              title="Order Timeline"
+              title="정기 배송 일정"
               list={[...Array(5)].map((_, index) => ({
                 id: faker.datatype.uuid(),
                 title: [
-                  "1983, orders, $4220",
-                  "12 Invoices have been paid",
-                  "Order #37745 from September",
-                  "New order placed #XF-2356",
-                  "New order placed #XF-2346",
+                  "2023.07.24, 4주차, 47000원",
+                  "2023.07.31, 1주차, 52000원",
+                  "2023.08.07, 2주차, 58000원",
+                  "2023.08.14, 3주차, 43000원",
+                  "2023.08.21, 4주차, 50000원",
                 ][index],
                 type: `order${index + 1}`,
                 time: faker.date.past(),
@@ -200,7 +201,7 @@ export default function DashboardAppPage() {
             />
           </Grid>
 
-          <Grid item xs={12} md={6} lg={4}>
+          {/* <Grid item xs={12} md={6} lg={4}>
             <AppTrafficBySite
               title="Traffic by Site"
               list={[
@@ -250,17 +251,19 @@ export default function DashboardAppPage() {
                 },
               ]}
             />
-          </Grid>
+          </Grid> */}
 
           <Grid item xs={12} md={6} lg={8}>
             <AppTasks
               title="Tasks"
               list={[
-                { id: "1", label: "Create FireStone Logo" },
-                { id: "2", label: "Add SCSS and JS files if required" },
-                { id: "3", label: "Stakeholder Meeting" },
-                { id: "4", label: "Scoping & Estimations" },
-                { id: "5", label: "Sprint Showcase" },
+                { id: "1", label: "이번주 식단 추천 확인하기" },
+                { id: "2", label: "이번달 내 마이크로바이옴 검사받기" },
+                { id: "3", label: "이번달 예솔이 마이크로바이옴 검사받기" },
+                { id: "4", label: "정기배송 날짜 신청하기" },
+                { id: "5", label: "마늘 구매하기" },
+                { id: "6", label: "사과 구매하기" },
+                { id: "7", label: "레드와인 구매하기" },
               ]}
             />
           </Grid>
@@ -269,129 +272,3 @@ export default function DashboardAppPage() {
     </>
   );
 }
-
-// import { Helmet } from "react-helmet-async";
-// import { faker } from "@faker-js/faker";
-// // @mui
-// // import { useTheme } from "@mui/material/styles";
-// import { Grid, Container, Typography } from "@mui/material";
-// // components
-// // import Iconify from "../components/iconify";
-// // sections
-// import {
-//   AppTasks,
-//   AppNewsUpdate,
-//   AppOrderTimeline,
-//   AppWebsiteVisits,
-//   // AppCurrentVisits,
-//   // AppTrafficBySite,
-//   // AppWidgetSummary,
-//   // AppCurrentSubject,
-//   // AppConversionRates,
-// } from "../sections/@dashboard/app";
-
-// // ----------------------------------------------------------------------
-// export default function DashboardAppPage() {
-//   // const theme = useTheme();
-//   return (
-//     <>
-//       <Helmet>
-//         <title> Home | Biomnia </title>
-//       </Helmet>
-
-//       <Container maxWidth="xl">
-//         <Typography variant="h3" sx={{ mb: 5 }}>
-//           안녕하세요! 박연진 님 <br></br>오늘도 Biomnia와 함께 마이크로바이옴을
-//           챙겨봐요!
-//         </Typography>
-
-//         <Grid container spacing={3}>
-//           <Grid item xs={12} md={6} lg={8}>
-//             <AppWebsiteVisits
-//               title="마이크로바이옴 상태"
-//               subheader="(+31.4%) than last year"
-//               chartLabels={[
-//                 "09/01/2022",
-//                 "10/01/2022",
-//                 "11/01/2022",
-//                 "12/01/2022",
-//                 "01/01/2023",
-//                 "02/01/2023",
-//                 "03/01/2023",
-//                 "04/01/2023",
-//                 "05/01/2023",
-//                 "06/01/2023",
-//                 "07/01/2023",
-//               ]}
-//               chartData={[
-//                 {
-//                   name: "나의 마이크로바이옴",
-//                   type: "area",
-//                   fill: "gradient",
-//                   data: [22, 25, 20, 43, 38, 45, 40, 50, 55, 65, 70],
-//                 },
-//                 {
-//                   name: "우리 아이 마이크로바이옴",
-//                   type: "area",
-//                   fill: "gradient",
-//                   data: [30, 25, 36, 30, 45, 35, 55, 52, 59, 50, 67],
-//                 },
-//               ]}
-//             />
-//           </Grid>
-
-//           <Grid item xs={12} md={6} lg={4}>
-//             <AppOrderTimeline
-//               title="정기 배송 일정"
-//               list={[...Array(5)].map((_, index) => ({
-//                 id: faker.datatype.uuid(),
-//                 title: [
-//                   "2023.07.24, 4주차, 47000원",
-//                   "2023.07.31, 1주차, 52000원",
-//                   "2023.08.07, 2주차, 58000원",
-//                   "2023.08.14, 3주차, 43000원",
-//                   "2023.08.21, 4주차, 50000원",
-//                 ][index],
-//                 type: `order${index + 1}`,
-//                 // time: faker.date.past(),
-//                 time: ["2023.06.24"],
-//               }))}
-//             />
-//           </Grid>
-//           <Grid item xs={12} md={6} lg={8}>
-//             <AppNewsUpdate
-//               title="나의 냉장고 관리"
-//               list={[...Array(5)].map((_, index) => ({
-//                 id: faker.datatype.uuid(),
-//                 title: ["사과", "귀리", "양파", "토마토", "바나나"][index],
-//                 description: [
-//                   "바이옴니아",
-//                   "바이옴니아",
-//                   "이마트",
-//                   "홈플러스",
-//                   "쿠팡",
-//                 ][index],
-//                 image: `/assets/images/home_image/re_${index + 1}.jpeg`,
-//                 postedAt: faker.date.recent(),
-//               }))}
-//             />
-//           </Grid>
-//           <Grid item xs={12} md={6} lg={4}>
-//             <AppTasks
-//               title="Tasks"
-//               list={[
-//                 { id: "1", label: "이번주 식단 추천 확인하기" },
-//                 { id: "2", label: "이번달 내 마이크로바이옴 검사받기" },
-//                 { id: "3", label: "이번달 예솔이 마이크로바이옴 검사받기" },
-//                 { id: "4", label: "정기배송 날짜 신청하기" },
-//                 { id: "5", label: "마늘 구매하기" },
-//                 { id: "6", label: "사과 구매하기" },
-//                 { id: "7", label: "레드와인 구매하기" },
-//               ]}
-//             />
-//           </Grid>
-//         </Grid>
-//       </Container>
-//     </>
-//   );
-// }
